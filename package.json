@@ -1,0 +1,63 @@
+{
+  "name": "post-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client:start": "webpack ./dist/bundle.js",
+    "client:dev": "webpack serve --mode development --config-name client",
+    "client:build": "webpack --mode production --config-name client",
+    "server:start": "node ./dist/bundle.js",
+    "server:dev": "ts-node-dev ./src/server/index.ts",
+    "server:build": "webpack --mode production --config-name server"
+  },
+  "_moduleAliases": {
+    "common": "./src/common",
+    "client": "./src/client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/connect-redis": "0.0.16",
+    "@types/express-session": "^1.17.3",
+    "@types/ioredis": "^4.26.4",
+    "@types/module-alias": "^2.0.0",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "@types/react-router-config": "^5.0.2",
+    "@types/react-router-dom": "^5.1.7",
+    "dotenv-webpack": "^7.0.3",
+    "html-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.2.3",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "@nestjs/common": "^7.6.17",
+    "@nestjs/config": "^0.6.3",
+    "@nestjs/core": "^7.6.17",
+    "@nestjs/platform-express": "^7.6.17",
+    "@nestjs/serve-static": "^2.1.4",
+    "@nestjs/typeorm": "^7.1.5",
+    "connect-redis": "^6.0.0",
+    "effector": "^21.8.11",
+    "effector-react": "^21.3.2",
+    "effector-root": "^1.3.0",
+    "express-session": "^1.17.2",
+    "ioredis": "^4.27.5",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.2.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.1.0",
+    "typeorm": "^0.2.34"
+  }
+}
