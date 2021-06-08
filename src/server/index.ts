@@ -23,7 +23,7 @@ async function bootstrap() {
       client: redis,
       disableTouch: true
     }),
-    secret: "SECRET-CAT",
+    secret: process.env.SESSION_SECRET!,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 365 * 10, // 10 years
       httpOnly: true,
