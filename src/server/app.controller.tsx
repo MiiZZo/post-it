@@ -83,7 +83,6 @@ function htmlStart() {
   return `<!doctype html>
     <html lang="">
     <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet='utf-8' />
         <title>Post It</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -94,7 +93,7 @@ function htmlStart() {
 
 function htmlEnd(storesValues: Record<string, unknown>): string {
   return `</div>
-        <script type="text/babel" src="js/bundle.js" defer></script>
+        <script src="js/bundle.js" defer></script>
         <script>
           window.INITIAL_STATE = ${JSON.stringify(storesValues)}
         </script>
